@@ -27,7 +27,7 @@ function getGreeting() {
   if (time >= 6 && time <= 12) {
     return "Good morning";
   }
-  if (time > 13 && time < 18) {
+  if (time >= 13 && time <= 18) {
     return "Good afternoon";
   }
   if (time >= 19 && time <= 22) {
@@ -38,9 +38,17 @@ function getGreeting() {
   }
 }
 // Code here
+//- monday: "darkgray"
+//- tuesday - friday: "lightblue"
+//- saturday - sunday: "hotpink"
 
 function getDayColor() {
   // Code here
+  const weekDay = new Date().getDay();
+  if (weekDay === 1) return "darkgray";
+  if (weekDay === 2 || weekDay === 3 || weekDay === 4 || weekDay === 5)
+    return "lightblue";
+  return "hotpink";
 }
 
 display.textContent = getGreeting();
