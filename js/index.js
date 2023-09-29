@@ -33,10 +33,8 @@ function getGreeting() {
   if (time >= 19 && time <= 22) {
     return "Good evening";
   }
-  if (time >= 23 && time <= 5) {
-    return "Good night";
-  }
-}
+  if (time <= 23 && time <= 5) return "Good night";
+} // THIS LINE OF CODE DID NOT EXECUTE BECAUSE 00 IS NOT GREATER THAN 23,YOU HAVE TO PUT TIME IS LESS THAN 23 TO WORK
 // Code here
 //- monday: "darkgray"
 //- tuesday - friday: "lightblue"
